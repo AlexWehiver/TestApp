@@ -1,0 +1,85 @@
+﻿@model IEnumerable<TestApp.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+<input type="button" value="Add a Product" onclick="location.href='@Url.Action("Create", "Product" )'" />
+
+
+<div>
+    <input type="text" id="filter" onkeyup="filterFunction()" placeholder="Search for products..">
+</div>
+
+
+<table id="Products">
+    <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Is it available?</th>
+    </tr>
+    @foreach (var item in Model.Reverse())
+    {
+        <tr id="Product">
+            <td class="Name">
+                @Html.ActionLink(item.Name, "Edit", "Product", new { Id = item.Id }, new { @class = "Product" })
+            </td>
+            <td class="Quantity">
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td class="IsInStock">
+                @if (item.IsInStock == true)
+                {
+                    <span>Yes</span>
+                }
+                else
+                {
+                    <span>No</span>
+                }
+
+            </td>
+            <td class=" manageButtons">
+                @Html.ActionLink("Edit", "Edit", "Product", new { Id = item.Id }, new { @class = "edit" }) |
+                @Html.ActionLink("Delete", "Delete", "Product", new { Id = item.Id }, new { @class = "delete" })
+            </td>
+        </tr>
+    }
+    
+</table>
+<script>
+    function filterFunction() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("filter");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("Products");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{D5AB8EA9-0EA1-45BD-8741-BF1125FA31E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp.Tests", "TestApp.Tests\TestApp.Tests.csproj", "{41F744B7-D3C9-440E-A457-52200DBDDE96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5AB8EA9-0EA1-45BD-8741-BF1125FA31E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5AB8EA9-0EA1-45BD-8741-BF1125FA31E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5AB8EA9-0EA1-45BD-8741-BF1125FA31E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5AB8EA9-0EA1-45BD-8741-BF1125FA31E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41F744B7-D3C9-440E-A457-52200DBDDE96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41F744B7-D3C9-440E-A457-52200DBDDE96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41F744B7-D3C9-440E-A457-52200DBDDE96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41F744B7-D3C9-440E-A457-52200DBDDE96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D28FDF6-D913-4E65-8E78-A3A948469840}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://alexgrigore.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TestApp.Tests\\TestApp.Tests.csproj
+		SccProjectName1 = TestApp.Tests
+		SccLocalPath1 = TestApp.Tests
+		SccProjectUniqueName2 = TestApp\\TestApp.csproj
+		SccProjectName2 = TestApp
+		SccLocalPath2 = TestApp
+	EndGlobalSection
+EndGlobal
